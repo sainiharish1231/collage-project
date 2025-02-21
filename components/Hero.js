@@ -63,7 +63,6 @@ const Hero = () => {
               </div>
             </Reveal>
           </div>
-
         </div>
 
         {/* Right Section: Gallery */}

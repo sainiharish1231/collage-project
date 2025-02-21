@@ -20,6 +20,21 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
+    "/About": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/About.js"
+    ],
+    "/Projects": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Projects.js"
+    ],
+    "/Skill": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Skill.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
