@@ -1,4 +1,5 @@
-import { keyframes } from '@emotion/react';
+"use client"
+import { keyframes } from "@emotion/react";
 
 export const fadeInUp = keyframes`
 0% {
