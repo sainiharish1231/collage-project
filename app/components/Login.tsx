@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-const Login: any = () => {
+const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -12,7 +12,7 @@ const Login: any = () => {
 
   const router = useRouter();
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     try {
@@ -23,7 +23,7 @@ const Login: any = () => {
       });
 
       if (!response || response.error) {
-        setError("Invalid Username or Password .");
+        setError("Invalid Username or Password.");
         return;
       }
 
@@ -34,32 +34,32 @@ const Login: any = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex mt-20 justify-center">
-      <div className="lg:flex">
-        <div className="mx-auto py-8 rounded-lg">
-          <div className="">
-            <h2 className="text-2xl font-bold tracking-wide">{`Log In`}</h2>
-            <p className="text-sm mt-2">
-              {`   Don't have an account?`}
-              <Link
-                href="/SignUp"
-                className="text-purple-600 hover:text-purple-600 hover:underline"
-                title="Sign Up"
-              >
-                {`  Sign up here`}
-              </Link>
+    <div className="w-full mt-20 flex justify-center">
+      <div className="lg:flex ">
+        <div className="w-full mt-40 flex p-4 flex-col justify-center bg-cover bg-center">
+          <div>
+            <h2 className="text-2xl font-bold">Log In</h2>
+            <p className="text-sm mt-2 flex justify-start gap-4 items-center">
+              <span>Don&apos;t have an account?</span>
+              <span>
+                <Link
+                  href="/signUp"
+                  className="text-black bg-white p-2 rounded-lg font-bold gap-6 text-lg hover:underline"
+                  title="Sign Up"
+                >
+                  Sign up here
+                </Link>
+              </span>
             </p>
           </div>
           <form className="my-8 text-sm" onSubmit={handleSubmit}>
             <div className="flex flex-col my-4">
-              <label htmlFor="email" className="">
-                {`  Email Address`}
-              </label>
+              <label htmlFor="email">Email Address</label>
               <input
                 type="email"
                 name="email"
                 id="email"
-                className="mt-2 dark:bg-[#121212] p-2 border border-purple-600 focus:outline-none focus:ring-0 rounded text-sm"
+                className="mt-2 text-black p-2 border border-purple-600 focus:outline-none focus:ring-0 rounded text-sm"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -67,15 +67,13 @@ const Login: any = () => {
             </div>
 
             <div className="flex flex-col my-4">
-              <label htmlFor="password" className="">
-                {`   Password`}
-              </label>
-              <div className="relative flex items-center mt-2">
+              <label htmlFor="password">Password</label>
+              <div className="relative flex text-black items-center mt-2">
                 <input
                   type={showPassword ? "text" : "password"}
                   name="password"
                   id="password"
-                  className="flex-1 p-2 border pr-10 border-purple-600 focus:outline-none focus:ring-0 dark:bg-[#121212] rounded text-sm"
+                  className="flex-1 p-2 text-black border pr-10 border-purple-600 focus:outline-none focus:ring-0 rounded text-sm"
                   placeholder="Enter your password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -124,23 +122,12 @@ const Login: any = () => {
               </div>
             </div>
 
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                name="remember_me"
-                id="remember_me"
-                className="mr-2 focus:bg-purple-600"
-              />
-              <label htmlFor="remember_me" className="">
-                {` Remember Me`}
-              </label>
-            </div>
             {error && (
               <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
                 {error}
               </div>
             )}
-            <div className="my-4 flex items-center justify-end space-x-4">
+            <div className="my-4 flex w-full items-center justify-end space-x-4">
               <div className="flex justify-center m-10">
                 <button
                   type="submit"
@@ -148,7 +135,7 @@ const Login: any = () => {
                 >
                   <span className="flex justify-center w-[300px] h-48 rounded bg-purple-600 absolute bottom-0 left-0 translate-y-full ease-out duration-[1300ms] transition-all group-hover:mb-0 group-hover:translate-y-0"></span>
                   <span className="relative justify-center text-left text-black duration-[1300ms] ease-out text-xl group-hover:text-white">
-                    {` Log In`}
+                    Log In
                   </span>
                 </button>
               </div>

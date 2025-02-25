@@ -10,12 +10,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`main_bg h-full p-4 text-white w-full`}>
+      <body className={`main_bg h-full  text-white w-full`}>
         <AuthProvider>
           <div>
             <Navbar />
-            {children}
-
+            <div className="p-4">{children}</div>
             <Footer />
           </div>
         </AuthProvider>

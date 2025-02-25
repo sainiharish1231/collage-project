@@ -68,16 +68,16 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex mt-20 justify-center">
+    <div className="w-full min-h-screen flex mt-40 justify-center">
       <div className="lg:flex">
         <div className="mx-auto py-8 rounded-lg">
           <div className="">
             <h2 className="text-2xl font-bold tracking-wide">Sign Up</h2>
-            <p className="text-sm mt-2">
+            <p className="text-sm mt-2 flex  justify-start items-center gap-4">
               Already have an account?{" "}
               <a
                 href="/login"
-                className="text-purple-600 hover:text-purple-600 hover:underline"
+                className="bg-white text-black p-2  rounded-lg font-bold hover:underline"
                 title="Sign In"
               >
                 Sign in here
@@ -95,7 +95,7 @@ const SignUp: React.FC = () => {
                 id="name"
                 value={name}
                 onChange={(e) => setUsername(e.target.value)}
-                className="mt-2 dark:bg-[#121212] p-2 border border-purple-600 focus:outline-none focus:ring-0 focus:border-gray-300 rounded text-sm"
+                className="mt-2 text-black p-2 border border-purple-600 focus:outline-none focus:ring-0 focus:border-gray-300 rounded text-sm"
                 placeholder="Enter your name"
               />
             </div>
@@ -110,7 +110,7 @@ const SignUp: React.FC = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-2 dark:bg-[#121212] p-2 border border-purple-600 focus:outline-none focus:ring-0 rounded text-sm"
+                className="mt-2 text-black  p-2 border border-purple-600 focus:outline-none focus:ring-0 rounded text-sm"
                 placeholder="Enter your email"
               />
             </div>
@@ -119,14 +119,14 @@ const SignUp: React.FC = () => {
               <label htmlFor="password" className="">
                 Password
               </label>
-              <div className="relative flex items-center mt-2">
+              <div className="relative flex  text-black items-center mt-2">
                 <input
                   type={showPassword ? "text" : "password"}
                   name="password"
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="flex-1 p-2 border pr-10 border-purple-600 focus:outline-none focus:ring-0 dark:bg-[#121212] rounded text-sm"
+                  className="flex-1 p-2 border pr-10 border-purple-600 focus:outline-none focus:ring-0  rounded text-sm"
                   placeholder="Enter your password"
                 />
                 <button
@@ -177,14 +177,14 @@ const SignUp: React.FC = () => {
               <label htmlFor="password_confirmation" className="">
                 Password Confirmation
               </label>
-              <div className="relative flex items-center mt-2">
+              <div className="relative flex text-black items-center mt-2">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
                   name="password_confirmation"
                   id="password_confirmation"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="flex-1 p-2 pr-10 border dark:bg-[#121212] border-purple-600 focus:outline-none focus:ring-0 focus:border-purple-600 rounded text-sm"
+                  className="flex-1 p-2 pr-10 border  border-purple-600 focus:outline-none focus:ring-0 focus:border-purple-600 rounded text-sm"
                   placeholder="Enter your password again"
                 />
                 <button
@@ -235,7 +235,7 @@ const SignUp: React.FC = () => {
                 {error}
               </div>
             )}
-            <div className="flex items-center">
+            {/*   <div className="flex items-center">
               <input
                 type="checkbox"
                 name="remember_me"
@@ -251,7 +251,7 @@ const SignUp: React.FC = () => {
                   privacy policy
                 </a>
               </label>
-            </div>
+            </div> */}
 
             <div className="my-4 flex items-center justify-end space-x-4">
               <div className="my-4 flex items-center justify-end space-x-4">
