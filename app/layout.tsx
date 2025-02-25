@@ -25,7 +25,7 @@ export default function RootLayout({
         <meta property="og:description" content="next=jss" />
         <meta
           property="og:image"
-          content={process.env.NEXT_PUBLIC_MAIN_URL + "logo.png"}
+          content={process.env.NEXT_PUBLIC_MAIN_URL + "/logo.png"}
         />
 
         <meta property="og:locale" content="id" />
