@@ -43,7 +43,7 @@ const Login: React.FC = () => {
               <span>Don&apos;t have an account?</span>
               <span>
                 <Link
-                  href="/signUp"
+                  href="/signup"
                   className="text-black bg-white p-2 rounded-lg font-bold gap-6 text-lg hover:underline"
                   title="Sign Up"
                 >
