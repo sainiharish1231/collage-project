@@ -8,7 +8,7 @@ import {
   fadeInLeft,
   fadeInRight,
   fadeInUp,
-} from "../keyframes";
+} from "./keyframes";
 // import Button from "./Button";
 
 interface HeroProps {

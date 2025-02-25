@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { fadeInDownShorter, fadeInUp } from "..//keyframes";
+import { fadeInDownShorter, fadeInUp } from "./keyframes";
 import Reveal from "react-awesome-reveal";
 import Link from "next/link";
 import Image from "next/image";

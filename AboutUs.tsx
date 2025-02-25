@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import { Reveal } from "react-awesome-reveal";
-import { fadeInDownShorter2, fadeInLeft } from "../keyframes";
+import { fadeInDownShorter2, fadeInLeft } from "./keyframes";
 import Image from "next/image"; // Import Next.js Image component
 
 const AboutUs: React.FC = () => {

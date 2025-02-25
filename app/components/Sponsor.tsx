@@ -4,7 +4,7 @@ import { Reveal } from "react-awesome-reveal";
 import { fadeInUp } from "../keyframes";
 
 const Sponsor = () => {
-  const sponsors = ["Harish","abhimanyu", "Mahesh", ];
+  const sponsors = ["Harish", "abhimanyu", "Mahesh"];
 
   return (
     <Container className="grid grid-cols-3 gap-5 items-center">
