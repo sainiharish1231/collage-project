@@ -3,11 +3,9 @@ import SignUp from "../components/SignUp";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/authOptions";
-import { Session } from "next-auth";
-
-const SignupPage = async () => {
-  const session: Session | null = await getServerSession(authOptions);
-  if (session) redirect("/profile");
+const SingupPage = async () => {
+  const session: any = await getServerSession(authOptions);
+  if (session) redirect("profile");
 
   return (
     <div>
@@ -16,4 +14,4 @@ const SignupPage = async () => {
   );
 };
 
-export default SignupPage;
+export default SingupPage;

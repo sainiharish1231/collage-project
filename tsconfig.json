@@ -21,6 +21,19 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/blog/[id]/page.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/api/[Blogid]/route.ts",
+    "lib/dbconnect/dbconnect.ts",
+    "app/components/ClientReviews/fake_data.js",
+    "app/api/(auth)/register/route.js",
+    "app/api/auth/[...nextauth]/route.js",
+    "app/Providers.js",
+    "app/components/SignUp.tsx",
+    "app/api/auth/[...nextauth]/authOptions.ts"
+  ],
   "exclude": ["node_modules"]
 }
