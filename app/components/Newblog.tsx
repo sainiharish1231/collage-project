@@ -5,17 +5,9 @@ import { useEffect, useRef, useState } from "react";
 
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
-interface BlogItem {
-  urlkey: string;
-  Image: string;
-  title: string;
-  description: string;
-  Category: string;
-  uploadTime: string;
-}
-
 const NewBlog = () => {
-  const [blogItem, setBlogItem] = useState<BlogItem[]>([]);
+  const [blogItem, setBlogItem] = useState("");
+
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -31,11 +23,15 @@ const NewBlog = () => {
     }
   };
 
-  const categories = Array.from(new Set(blogItem.map((item) => item.Category)));
+  const categories = Array.from(
+    new Set(Object.values(blogItem).map((item: any) => item.Category))
+  );
 
   const filteredItems = selectedCategory
-    ? blogItem.filter((item) => item.Category === selectedCategory)
-    : blogItem;
+    ? Object.values(blogItem).filter(
+        (item: any) => item.Category === selectedCategory
+      )
+    : Object.values(blogItem);
 
   const fetchData = async () => {
     try {
@@ -43,8 +39,8 @@ const NewBlog = () => {
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
-      const responseData: { data: BlogItem[] } = await response.json();
-      setBlogItem(responseData.data || []);
+      const responseData = await response.json();
+      setBlogItem(responseData.data || null);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -54,7 +50,7 @@ const NewBlog = () => {
     fetchData();
   }, []);
 
-  if (blogItem.length === 0)
+  if (!blogItem)
     return (
       <div className="flex justify-center items-center h-screen">
         <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-b-4 border-purple-500"></div>
@@ -107,7 +103,7 @@ const NewBlog = () => {
       </div>
 
       <div className="w-full py-6">
-        {filteredItems.map((item) => (
+        {filteredItems.map((item: any) => (
           <div key={item.urlkey} className="my-10 w-full p-2  rounded-lg ">
             <div className="grid  w-full grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative">
