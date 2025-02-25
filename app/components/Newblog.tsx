@@ -60,7 +60,7 @@ const NewBlog = () => {
   return (
     <>
       <div
-        className="flex items-center space-x-2 overflow-x-auto"
+        className="flex items-center space-x-2  sm:mt-20 overflow-x-auto"
         style={{ scrollbarWidth: "none" }}
       >
         <FiArrowLeft
