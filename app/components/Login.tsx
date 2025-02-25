@@ -36,7 +36,7 @@ const Login: React.FC = () => {
   return (
     <div className="w-full mt-20 flex justify-center">
       <div className="lg:flex ">
-        <div className="w-full mt-40 flex p-4 flex-col justify-center bg-cover bg-center">
+        <div className="w-full mt-40 flex flex-col justify-center bg-cover bg-center">
           <div>
             <h2 className="text-2xl font-bold">Log In</h2>
             <p className="text-sm mt-2 flex justify-start gap-4 items-center">
