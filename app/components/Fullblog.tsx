@@ -3,7 +3,7 @@ import { Item } from "@/app/api/newblog/route";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-import BlogLike from "@/lib/modals/BlogLike";
+import Features from "./Features";
 
 const formatDate = (date: Date): string => {
   const day = String(date.getDate()).padStart(2, "0");
@@ -28,7 +28,7 @@ export interface IdpageProps {
   item: Item;
 }
 
-const Idpage = ({ item }: IdpageProps) => {
+const Fullblog = ({ item }: IdpageProps) => {
   const [likebtnfill, setLikebtnFill] = useState("none");
   const [likebtnclour, setLikebtnClour] = useState("currentColor");
   const [likeCounter, setLikeCounter] = useState(item.Likes); // Correctly typed as number
@@ -166,7 +166,7 @@ const Idpage = ({ item }: IdpageProps) => {
       userImage: userImage,
     };
 
-    const updatedComments = [...comments, newCommentData];
+    const updatedComments: any = [...comments, newCommentData];
     setComments(updatedComments);
 
     try {
@@ -207,8 +207,8 @@ const Idpage = ({ item }: IdpageProps) => {
 
   return (
     <>
-      <div className="sm:m-21 flex-col mt-40 px-28 0 mb-40  flex ">
-        <div className="flex shadow-md rounded-lg max-w-6xl overflow-hidden mx-auto justify-center items-center w-full">
+      <div className="flex-col mt-10 mb-40 flex">
+        <div className="flex sm:mt-20 sm:px-[52px] rounded-lg max-w-6xl overflow-hidden mx-auto justify-center items-center w-full">
           <div className="flex s-center w-full">
             <div className="w-full">
               <div
@@ -401,9 +401,10 @@ const Idpage = ({ item }: IdpageProps) => {
             </div>
           </div>
         </div>
+        <Features />
       </div>
     </>
   );
 };
 
-export default Idpage;
+export default Fullblog;

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { useState } from "react";
 import useWindowSize from "@/hooks/useWindowSize";
-import Image from "next/image";
+import { MdOutlinePlaylistAdd } from "react-icons/md";
 
 const Navbar = () => {
   const [isFlex, setIsFlex] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className=" ">
           <div className={"flex justify-between items-center sm:hidden"}>
             <button id="navBtn" onClick={handleClick}>
-              <Image alt="manu" height={1000} width={1000} src="/icons/menu.svg" />
+              <img src="/icons/menu.svg" />
             </button>
           </div>
         </div>
