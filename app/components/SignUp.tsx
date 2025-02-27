@@ -235,23 +235,7 @@ const SignUp: React.FC = () => {
                 {error}
               </div>
             )}
-            {/*   <div className="flex items-center">
-              <input
-                type="checkbox"
-                name="remember_me"
-                id="remember_me"
-                className="mr-2 focus:bg-purple-600"
-              />
-              <label htmlFor="remember_me" className="">
-                I accept the terms and{" "}
-                <a
-                  href="#"
-                  className="text-purple-600 hover:text-purple-600 hover:underline"
-                >
-                  privacy policy
-                </a>
-              </label>
-            </div> */}
+
 
             <div className="my-4 flex items-center justify-end space-x-4">
               <div className="my-4 flex items-center justify-end space-x-4">

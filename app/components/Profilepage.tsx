@@ -24,7 +24,7 @@ const Profile = () => {
   const userImage = user?.image;
 
   return (
-    <div className="w-full flex flex-col gap-5 px-3 md:px-16 lg:px-28 md:flex-row">
+    <div className="w-full flex mt-20 flex-col gap-5 px-3 md:px-16 lg:px-28 md:flex-row">
       <main className="w-full flex justify-center min-h-screen">
         <div className="p-2 md:p-4">
           <div className="w-full px-6 pb-8 mt-8 sm:max-w-xl sm:rounded-lg">
