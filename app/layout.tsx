@@ -14,6 +14,7 @@ export default function RootLayout({
       <Head>
         {/* Existing meta tags */}
         <title>mygreed</title>
+        <meta name="google-adsense-account" content="ca-pub-5983875241543751"></meta>
         <meta name="title" content="mygreed" />
         <meta name="description" content="blog" />
         <meta name="keywords" content="portfolio,next-js,blog " />
