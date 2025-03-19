@@ -3,7 +3,6 @@ import "./globals.scss";
 import { Footer, Navbar } from "./components";
 import { AuthProvider } from "./providers";
 import Head from "next/head";
-import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -13,8 +12,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-       
-        <title>sainiharish123</title>
+        {/* Existing meta tags */}
+        <title>mygreed</title>
         <meta name="title" content="mygreed" />
         <meta name="description" content="blog" />
         <meta name="keywords" content="portfolio,next-js,blog " />
@@ -49,33 +48,28 @@ export default function RootLayout({
 
         {/* Google AdSense Meta Tag */}
         <meta name="google-adsense-account" content="ca-pub-5983875241543751" />
-
-        {/* Google Analytics Scripts */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-B8BMYM71RC"
-        />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-B8BMYM71RC');
-            `,
-          }}
-        />
       </Head>
 
+      {/* Google Analytics Script */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-B8BMYM71RC"
+      ></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-B8BMYM71RC');
+        `}
+      </script>
+
       {/* Google AdSense Script */}
-      <Script
-        strategy="afterInteractive"
+      <script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5983875241543751"
         crossOrigin="anonymous"
-      />
+      ></script>
 
       <body className={`main_bg h-full  text-white w-full`}>
         <AuthProvider>
