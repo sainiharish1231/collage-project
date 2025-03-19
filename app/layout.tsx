@@ -10,6 +10,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gtmId = "G-B8BMYM71RC";
   return (
     <html lang="en">
       <head>
@@ -53,11 +54,24 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-5983875241543751" />
 
         {/* Google Analytics Script */}
+
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gtmId}`}
+        ></script>
+             <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-B8BMYM71RC"
         ></script>
-          <GoogleTagManager gtmId={`G-B8BMYM71RC`} />
+          <GoogleTagManager gtmId={`${gtmId}`} />
         <script>
           {`
             window.dataLayer = window.dataLayer || [];
