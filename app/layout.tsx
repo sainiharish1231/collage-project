@@ -3,6 +3,7 @@ import "./globals.scss";
 import { Footer, Navbar } from "./components";
 import { AuthProvider } from "./providers";
 import Head from "next/head";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,
@@ -56,6 +57,7 @@ export default function RootLayout({
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-B8BMYM71RC"
         ></script>
+          <GoogleTagManager gtmId={`G-B8BMYM71RC`} />
         <script>
           {`
             window.dataLayer = window.dataLayer || [];
