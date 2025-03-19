@@ -14,6 +14,7 @@ export default function RootLayout({
     <head>
       {/* Existing meta tags */}
       <title>sainiharish123</title>
+      <meta name="google-analytics-id" content="G-B8BMYM71RC"></meta>
       <meta name="google-adsense-account" content="ca-pub-5983875241543751"></meta>
       <meta name="title" content="mygreed" />
       <meta name="description" content="blog" />
@@ -50,6 +51,8 @@ export default function RootLayout({
       {/* Google AdSense Meta Tag */}
       <meta name="google-adsense-account" content="ca-pub-5983875241543751" />
     </head>
+   
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B8BMYM71RC"></script>
 
     {/* Google Analytics Script */}
     <script
