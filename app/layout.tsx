@@ -3,6 +3,7 @@ import "./globals.scss";
 import { Footer, Navbar } from "./components";
 import { AuthProvider } from "./providers";
 import Head from "next/head";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -12,7 +13,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>mygreed</title>
+       
+        <title>sainiharish123</title>
         <meta name="title" content="mygreed" />
         <meta name="description" content="blog" />
         <meta name="keywords" content="portfolio,next-js,blog " />
@@ -27,7 +29,6 @@ export default function RootLayout({
           property="og:image"
           content={process.env.NEXT_PUBLIC_MAIN_URL + "/logo.png"}
         />
-
         <meta property="og:locale" content="id" />
         <meta property="og:image:alt" content="logo" />
         <meta property="og:image:type" content="png" />
@@ -45,7 +46,37 @@ export default function RootLayout({
           content={process.env.NEXT_PUBLIC_MAIN_URL + "logo.png"}
         />
         <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+
+        {/* Google AdSense Meta Tag */}
+        <meta name="google-adsense-account" content="ca-pub-5983875241543751" />
+
+        {/* Google Analytics Scripts */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-B8BMYM71RC"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-B8BMYM71RC');
+            `,
+          }}
+        />
       </Head>
+
+      {/* Google AdSense Script */}
+      <Script
+        strategy="afterInteractive"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5983875241543751"
+        crossOrigin="anonymous"
+      />
+
       <body className={`main_bg h-full  text-white w-full`}>
         <AuthProvider>
           <div>
