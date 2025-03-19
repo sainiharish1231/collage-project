@@ -3,7 +3,9 @@ import "./globals.scss";
 import { Footer, Navbar } from "./components";
 import { AuthProvider } from "./providers";
 import Head from "next/head";
+import * as ga from "../lib/ga";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -11,11 +13,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const gtmId = "G-B8BMYM71RC";
+  const adClient = "ca-pub-5983875241543751";
   return (
     <html lang="en">
-      <head>
-        {/* Existing meta tags */}
-        <title>sainiharish123</title>
+
+<head>
+         {/* Existing meta tags */}
+         <title>sainiharish123</title>
         <meta name="google-analytics-id" content="G-B8BMYM71RC"></meta>
         <meta name="google-adsense-account" content="ca-pub-5983875241543751"></meta>
         <meta name="title" content="mygreed" />
@@ -52,6 +56,52 @@ export default function RootLayout({
 
         {/* Google AdSense Meta Tag */}
         <meta name="google-adsense-account" content="ca-pub-5983875241543751" />
+
+        <GoogleTagManager gtmId={`${gtmId}`} />
+
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adClient}`}
+          crossOrigin="anonymous"
+        ></script>
+
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gtmId}`}
+        ></script>
+        <Script
+          src="https://accounts.google.com/gsi/client"
+          strategy="beforeInteractive"
+        />
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${ga.GA_TRACKING_ID}`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${ga.GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+      </head>
+      <head>
+      
 
         {/* Google Analytics Script */}
 
