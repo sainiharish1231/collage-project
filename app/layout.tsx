@@ -12,7 +12,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gtmId = "G-B8BMYM71RC";
+  const gtmId = "G-17GRNYL0R5";
   const adClient = "ca-pub-5983875241543751";
   return (
     <html lang="en">
@@ -20,7 +20,7 @@ export default function RootLayout({
 <head>
          {/* Existing meta tags */}
          <title>sainiharish123</title>
-        <meta name="google-analytics-id" content="G-B8BMYM71RC"></meta>
+        <meta name="google-analytics-id" content="G-17GRNYL0R5"></meta>
         <meta name="google-adsense-account" content="ca-pub-5983875241543751"></meta>
         <meta name="title" content="mygreed" />
         <meta name="description" content="blog" />
@@ -119,15 +119,16 @@ export default function RootLayout({
         </noscript>
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-B8BMYM71RC"
+          src="https://www.googletagmanager.com/gtag/js?id=G-17GRNYL0R5"
         ></script>
           <GoogleTagManager gtmId={`${gtmId}`} />
         <script>
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-B8BMYM71RC');
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-17GRNYL0R5')
           `}
         </script>
 
