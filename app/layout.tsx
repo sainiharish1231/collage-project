@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const gtmId = "G-17GRNYL0R5";
-  const adClient = "ca-pub-5983875241543751";
+  const adClient = "ca-pub-6532650680025889";
   return (
     <html lang="en">
 
@@ -21,7 +21,7 @@ export default function RootLayout({
          {/* Existing meta tags */}
          <title>sainiharish123</title>
         <meta name="google-analytics-id" content="G-17GRNYL0R5"></meta>
-        <meta name="google-adsense-account" content="ca-pub-5983875241543751"></meta>
+        <meta name="google-adsense-account" content="ca-pub-6532650680025889"></meta>
         <meta name="title" content="mygreed" />
         <meta name="description" content="blog" />
         <meta name="keywords" content="portfolio,next-js,blog " />
@@ -55,7 +55,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
 
         {/* Google AdSense Meta Tag */}
-        <meta name="google-adsense-account" content="ca-pub-5983875241543751" />
+        <meta name="google-adsense-account" content="ca-pub-6532650680025889" />
 
         <GoogleTagManager gtmId={`${gtmId}`} />
 
@@ -135,7 +135,7 @@ export default function RootLayout({
         {/* Google AdSense Script */}
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5983875241543751"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6532650680025889"
           crossOrigin="anonymous"
         ></script>
       </head>
