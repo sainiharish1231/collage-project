@@ -1,9 +1,6 @@
 export async function GET() {
   const adsTxtContent = `
-google.com, pub-5983875241543751, DIRECT, f08c47fec0942fa0
-example-ssp.com, 12345, DIRECT, 67890
-example-exchange.com, ABCDEF, RESELLER
-another-ssp.com, 98765, DIRECT, 12345
+ google.com, pub-6532650680025889, DIRECT, f08c47fec0942fa0
   `.trim();
 
   return new Response(adsTxtContent, {
