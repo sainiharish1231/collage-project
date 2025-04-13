@@ -134,8 +134,7 @@ const BlogForm: React.FC = () => {
           <div className="flex flex-col">
             <label
               htmlFor="title"
-              className="text-sm font-medium text-gray-700"
-            >
+              className="text-sm font-medium text-gray-700">
               Title
             </label>
             <input
@@ -150,8 +149,7 @@ const BlogForm: React.FC = () => {
           <div className="flex flex-col">
             <label
               htmlFor="urlkey"
-              className="text-sm font-medium text-gray-700"
-            >
+              className="text-sm font-medium text-gray-700">
               URL Key
             </label>
             <input
@@ -176,8 +174,7 @@ const BlogForm: React.FC = () => {
               />
               <label
                 htmlFor="fileInput"
-                className="flex flex-col items-center cursor-pointer text-gray-600 hover:text-indigo-500"
-              >
+                className="flex flex-col items-center cursor-pointer text-gray-600 hover:text-indigo-500">
                 <CloudUpload className="w-12 h-12 text-gray-400" />
                 <span className="text-sm mt-2">
                   Drag & Drop or Click to Upload
@@ -185,13 +182,13 @@ const BlogForm: React.FC = () => {
               </label>
               {image && (
                 <div className="mt-4 w-40 h-40 relative">
-                  <Image
+                  {/* <Image
                     src={image}
                     alt="Uploaded preview"
                     layout="fill"
                     objectFit="cover"
                     className="rounded-md shadow"
-                  />
+                  /> */}
                 </div>
               )}
             </div>
@@ -199,16 +196,14 @@ const BlogForm: React.FC = () => {
           <div className="flex flex-col">
             <label
               htmlFor="category"
-              className="text-sm font-medium text-gray-700"
-            >
+              className="text-sm font-medium text-gray-700">
               Category
             </label>
             <select
               id="category"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="mt-2 p-2 border border-purple-600 rounded text-sm text-black"
-            >
+              className="mt-2 p-2 border border-purple-600 rounded text-sm text-black">
               <option value="">Select a category</option>
               {categories.map((cat) => (
                 <option key={cat} value={cat}>
@@ -220,8 +215,7 @@ const BlogForm: React.FC = () => {
           <div className="flex flex-col">
             <label
               htmlFor="description"
-              className="text-sm font-medium text-gray-700"
-            >
+              className="text-sm font-medium text-gray-700">
               Description
             </label>
             <input
@@ -236,8 +230,7 @@ const BlogForm: React.FC = () => {
           <div className="flex flex-col">
             <label
               htmlFor="article"
-              className="text-sm font-medium text-gray-700"
-            >
+              className="text-sm font-medium text-gray-700">
               Article
             </label>
             <textarea
@@ -251,8 +244,7 @@ const BlogForm: React.FC = () => {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="w-full py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition"
-            >
+              className="w-full py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
               Post
             </button>
           </div>

@@ -19,13 +19,13 @@ const AboutUs: React.FC = () => {
         <div className="w-[44%] hidden sm:block">
           <Reveal keyframes={fadeInLeft} triggerOnce>
             <div className="relative w-full h-full rounded-2xl overflow-hidden">
-              <Image
+              {/* <Image
                 src="/aboutus.png"
                 alt="about us"
                 width={500} // Set appropriate width
                 height={300} // Set appropriate height
                 className="object-cover bg-center"
-              />
+              /> */}
             </div>
           </Reveal>
         </div>

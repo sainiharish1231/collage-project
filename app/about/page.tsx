@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { AboutUs, Navbar } from "../components";
 import Image from "next/image";
 
@@ -9,12 +9,12 @@ export default function About() {
         <div className="About">
           <div className="card">
             <div className="card-img">
-              <Image
+              {/* <Image
                 src="/my.jpeg"
                 alt="Harish Saini"
                 width={200}
                 height={200}
-              />
+              /> */}
             </div>
             <div className="desc">
               <h6 className="secondary-text">Web Developer</h6>
@@ -38,13 +38,13 @@ export default function About() {
         <div className="About">
           <div className="card">
             <div className="card-img">
-              <Image
+              {/* <Image
                 className="cover"
                 src="/abhi.jpeg"
                 alt="Abhimanyu"
                 width={200}
                 height={200}
-              />
+              /> */}
             </div>
             <div className="desc">
               <h6 className="secondary-text">FullStack Developer</h6>
@@ -68,7 +68,7 @@ export default function About() {
         <div className="About">
           <div className="card">
             <div className="card-img">
-              <Image src="/mahesh.jpeg" alt="Mahesh" width={200} height={200} />
+              {/* <Image src="/mahesh.jpeg" alt="Mahesh" width={200} height={200} /> */}
             </div>
             <div className="desc">
               <h6 className="secondary-text">FullStack Developer</h6>

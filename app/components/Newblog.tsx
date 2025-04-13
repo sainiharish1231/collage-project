@@ -62,8 +62,7 @@ const NewBlog = () => {
       <div className="w-full max-w-5xl flex justify-center items-center flex-col">
         <div
           className="flex items-center justify-center w-full  space-x-2  sm:mt-20 overflow-x-auto"
-          style={{ scrollbarWidth: "none" }}
-        >
+          style={{ scrollbarWidth: "none" }}>
           <FiArrowLeft
             className="text-2xl cursor-pointer hidden sm:block"
             onClick={scrollLeft}
@@ -71,16 +70,14 @@ const NewBlog = () => {
           <div
             ref={scrollContainerRef}
             className="flex space-x-2 overflow-x-auto"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
             <button
               className={`text-sm sm:text-lg py-2 px-4 rounded-full transition-all duration-300 whitespace-nowrap ${
                 selectedCategory === null
                   ? "bg-purple-600 text-white"
                   : "bg-white text-black hover:bg-purple-500"
               }`}
-              onClick={() => setSelectedCategory(null)}
-            >
+              onClick={() => setSelectedCategory(null)}>
               All
             </button>
             {categories.map((category) => (
@@ -91,8 +88,7 @@ const NewBlog = () => {
                     ? "bg-purple-600 text-white"
                     : "bg-white text-black hover:bg-purple-500"
                 }`}
-                onClick={() => setSelectedCategory(category)}
-              >
+                onClick={() => setSelectedCategory(category)}>
                 {category}
               </button>
             ))}
@@ -108,19 +104,18 @@ const NewBlog = () => {
             <div key={item.urlkey} className="my-10 w-full p-2  rounded-lg ">
               <div className="grid  w-full grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="relative">
-                  <Image
+                  {/* <Image
                     className="w-full h-auto lg:max-w-[80%] lg:max-h-[300px] rounded-lg transform hover:scale-105 transition duration-500"
                     src={item.Image}
                     width={540}
                     height={303}
                     alt="Blog post"
-                  />
+                  /> */}
                 </div>
                 <div className="flex flex-col justify-between ">
                   <Link
                     href={`blog/${item.urlkey}`}
-                    className="text-2xl font-bold text-white line-clamp-2 hover:underline"
-                  >
+                    className="text-2xl font-bold text-white line-clamp-2 hover:underline">
                     {item.title}
                   </Link>
                   <p className="text-gray-300 line-clamp-4 text-lg mt-2">

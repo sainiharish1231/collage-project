@@ -214,9 +214,8 @@ const Fullblog = ({ item }: IdpageProps) => {
               <div
                 className="relative pb-[60%] md:pb-[25%] lg:pb-[25%] overflow-hidden 
                xl:-translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700
-                ease-out"
-              >
-                <Image
+                ease-out">
+                {/* <Image
                   className="absolute inset-0 px-4 w-full !h-full object-cover transform 
                      hover:scale-105 trans
                      export interface IdpageProps {
@@ -226,7 +225,7 @@ const Fullblog = ({ item }: IdpageProps) => {
                   width={400}
                   height={50}
                   alt="Blog post"
-                />
+                /> */}
               </div>
               <p className="font-semibold text-lg mt-5 mx-3 px-2">
                 {item.title}
@@ -243,8 +242,7 @@ const Fullblog = ({ item }: IdpageProps) => {
                       fill="none"
                       width="30px"
                       viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
+                      stroke="currentColor">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -257,8 +255,7 @@ const Fullblog = ({ item }: IdpageProps) => {
                   {item.Comments.slice(0, 3).map((item: any, index: any) => (
                     <div
                       key={index}
-                      className={`mt-3 flex items-center justify-center rounded-full h-[25px] w-[25px] ${bgColors[index]} `}
-                    >
+                      className={`mt-3 flex items-center justify-center rounded-full h-[25px] w-[25px] ${bgColors[index]} `}>
                       <h1 className="text-xl text-[#ffff]">
                         {item.username.slice(0, 1).toUpperCase()}
                       </h1>
@@ -280,8 +277,7 @@ const Fullblog = ({ item }: IdpageProps) => {
                         stroke={likebtnclour}
                         strokeWidth="2"
                         strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
+                        strokeLinejoin="round">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                       </svg>
                       <div className="text-xl">{likeCounter}</div>
@@ -307,13 +303,13 @@ const Fullblog = ({ item }: IdpageProps) => {
                                     {(item.userImage || item.username) && (
                                       <div>
                                         {item.userImage ? (
-                                          <Image
-                                            className="object-cover rounded-full"
-                                            src={item.userImage}
-                                            alt={item.username}
-                                            width={150}
-                                            height={150}
-                                          />
+                                          // <Image
+                                          //   className="object-cover rounded-full"
+                                          //   src={item.userImage}
+                                          //   alt={item.username}
+                                          //   width={150}
+                                          //   height={150}
+                                          // />
                                         ) : (
                                           item.username
                                             .slice(0, 1)
@@ -350,13 +346,13 @@ const Fullblog = ({ item }: IdpageProps) => {
                             {(userImage || userName) && (
                               <div>
                                 {userImage ? (
-                                  <Image
-                                    className="object-cover rounded-full"
-                                    src={userImage}
-                                    alt={userName}
-                                    width={150}
-                                    height={150}
-                                  />
+                                  // <Image
+                                  //   className="object-cover rounded-full"
+                                  //   src={userImage}
+                                  //   alt={userName}
+                                  //   width={150}
+                                  //   height={150}
+                                  // />
                                 ) : (
                                   userName.slice(0, 1).toUpperCase()
                                 )}
@@ -369,8 +365,7 @@ const Fullblog = ({ item }: IdpageProps) => {
                         <button
                           type="submit"
                           className="p-1 focus:outline-none focus:shadow-none hover:text-blue-500"
-                          onClick={handleSubmit}
-                        >
+                          onClick={handleSubmit}>
                           <svg
                             fill="#000000"
                             width="35px"
@@ -378,8 +373,7 @@ const Fullblog = ({ item }: IdpageProps) => {
                             viewBox="0 0 24 24"
                             version="1.2"
                             baseProfile="tiny"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
+                            xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.368 19.102c.349 1.049 1.011 1.086 1.478.086l5.309-11.375c.467-1.002.034-1.434-.967-.967l-11.376 5.308c-1.001.467-.963 1.129.085 1.479l4.103 1.367 1.368 4.102z" />
                           </svg>
                         </button>

@@ -69,20 +69,18 @@ const Features: React.FC = () => {
             key={index}
             keyframes={index % 2 === 0 ? fadeInDownShorter : fadeInUp}
             duration={450}
-            delay={250}
-          >
+            delay={250}>
             <Link
               href={`/blog/${item.urlkey}`}
-              className="flex flex-col bg-white shadow-lg rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105"
-            >
+              className="flex flex-col bg-white shadow-lg rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
               <div className="h-full w-full">
-                <Image
+                {/* <Image
                   src={item.Image}
                   width={3000}
                   height={2200}
                   className="object-cover w-full h-[220px]"
                   alt={item.title}
-                />
+                /> */}
               </div>
               <div className="p-6 flex flex-col justify-between h-[230px]">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2 line-clamp-2">

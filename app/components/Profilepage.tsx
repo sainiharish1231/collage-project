@@ -37,13 +37,13 @@ const Profile = () => {
                   {(userImage || userName) && (
                     <div className="object-cover text-8xl flex justify-center items-center p-1 rounded-full ring-2 ring-purple-600 dark:ring-purple-600 h-[150px] w-[150px]">
                       {userImage ? (
-                        <Image
-                          className="object-cover rounded-full"
-                          src={userImage}
-                          alt={userName}
-                          width={150}
-                          height={150}
-                        />
+                        // <Image
+                        //   className="object-cover rounded-full"
+                        //   src={userImage}
+                        //   alt={userName}
+                        //   width={150}
+                        //   height={150}
+                        // />
                       ) : (
                         userName.slice(0, 1).toUpperCase()
                       )}

@@ -64,29 +64,29 @@ const Footer: React.FC = () => {
               <div className="flex items-center">
                 <div className="mr-10 cursor-pointer">
                   <Link href="https://www.youtube.com">
-                    <Image
+                    {/* <Image
                       src="/icons/youtube.svg"
                       width={34}
                       height={34}
                       alt="youtube"
-                    />
+                    /> */}
                   </Link>
                 </div>
                 <div className="mr-10 cursor-pointer">
-                  <Image
+                  {/* <Image
                     src="/icons/discord.svg"
                     width={28}
                     height={28}
                     alt="discord"
-                  />
+                  /> */}
                 </div>
                 <div className="cursor-pointer">
                   <Link href="https://www.instagram.com/">
-                    <Image
+                    {/* <Image
                       src="/icons/instagram.svg"
                       width={30}
                       height={30}
-                      alt="instagram"
+                      alt="instagram" */}
                     />
                   </Link>
                 </div>
@@ -101,8 +101,7 @@ const Footer: React.FC = () => {
       </div>
       <div
         onClick={scrollToTop}
-        className="animate-bounce h-14 w-14 cursor-pointer shadow-lg shadow-[#671AE4]/40 rounded-full bg-gradient-to-b font-bold from-[#B75CFF] to-[#671AE4] mx-auto flex justify-center items-center"
-      >
+        className="animate-bounce h-14 w-14 cursor-pointer shadow-lg shadow-[#671AE4]/40 rounded-full bg-gradient-to-b font-bold from-[#B75CFF] to-[#671AE4] mx-auto flex justify-center items-center">
         UP
       </div>
     </Container>

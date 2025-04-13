@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import {  Container } from "../components";
+import { Container } from "../components";
 import { Reveal } from "react-awesome-reveal";
 import {
   fadeInDownShorter,
@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({ teamMembers, posts, visitors }) => {
             </p>
           </Reveal>
           <div className="flex mb-10">
-          {/*   <Reveal keyframes={fadeInUp} duration={1000} delay={200}>
+            {/*   <Reveal keyframes={fadeInUp} duration={1000} delay={200}>
               <Button
                 isLink
                 href={"/#about"}
@@ -82,9 +82,8 @@ const Hero: React.FC<HeroProps> = ({ teamMembers, posts, visitors }) => {
                     key={index}
                     keyframes={index % 2 === 0 ? fadeInLeft : fadeInRight}
                     duration={800}
-                    delay={200 * index}
-                  >
-                    <Image
+                    delay={200 * index}>
+                    {/* <Image
                       className="h-auto max-w-full rounded-lg"
                       src={`https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-${
                         index + 1
@@ -92,7 +91,7 @@ const Hero: React.FC<HeroProps> = ({ teamMembers, posts, visitors }) => {
                       alt={`Gallery Image`}
                       width={300} // Adjust as needed
                       height={200}
-                    />
+                    /> */}
                   </Reveal>
                 ))}
               </div>
@@ -108,8 +107,7 @@ const Hero: React.FC<HeroProps> = ({ teamMembers, posts, visitors }) => {
             className="w-8 h-8 animate-bounce text-gray-600"
             fill="none"
             stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+            viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
