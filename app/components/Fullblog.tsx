@@ -303,6 +303,8 @@ const Fullblog = ({ item }: IdpageProps) => {
                                     {(item.userImage || item.username) && (
                                       <div>
                                         {item.userImage ? (
+                                          <></>
+                                        ) : (
                                           // <Image
                                           //   className="object-cover rounded-full"
                                           //   src={item.userImage}
@@ -310,7 +312,6 @@ const Fullblog = ({ item }: IdpageProps) => {
                                           //   width={150}
                                           //   height={150}
                                           // />
-                                        ) : (
                                           item.username
                                             .slice(0, 1)
                                             .toUpperCase()
@@ -346,6 +347,8 @@ const Fullblog = ({ item }: IdpageProps) => {
                             {(userImage || userName) && (
                               <div>
                                 {userImage ? (
+                                  <></>
+                                ) : (
                                   // <Image
                                   //   className="object-cover rounded-full"
                                   //   src={userImage}
@@ -353,7 +356,6 @@ const Fullblog = ({ item }: IdpageProps) => {
                                   //   width={150}
                                   //   height={150}
                                   // />
-                                ) : (
                                   userName.slice(0, 1).toUpperCase()
                                 )}
                               </div>

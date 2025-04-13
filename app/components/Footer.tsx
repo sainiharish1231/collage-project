@@ -86,8 +86,8 @@ const Footer: React.FC = () => {
                       src="/icons/instagram.svg"
                       width={30}
                       height={30}
-                      alt="instagram" */}
-                    />
+                      alt="instagram"
+                    /> */}
                   </Link>
                 </div>
               </div>
